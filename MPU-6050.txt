@@ -1,0 +1,20 @@
+MPU6050 6-eksen Jiroskop/Ývmeölçer Kartý
+- MPU6050, 3-eksen jiroskop ve 3-eksen ivmeölçere sahip bir IMU (inertial measurement unit – ataletsel ölçü birimi) sensörüdür. 
+- Cisimlerin hareket ve ivmelerini ölçmek için kullanýlýr.
+-  Jiroskop ile ivmeölçerin farký:
+	- Jiroskop ile ivmeölçerin farký; 
+	- Jiroskop ---- Hareketi, 
+	- Ývmeölçerin ----  Ývmeyi, ölçmesidir.
+	- Bildiðimiz üzere, durgun haldeki bir cisime etki eden tek ivme yerçekimidir. 
+	- Bu sayede ivmeölçer ile cismin üzerine etki eden yerçekimi ivmesini ölçerek üç boyutlu uzaydaki oryantasyonunu elde edebiliriz. 
+	- Ývmeölçerden alacaðýmýz bilgi, m/s2 veya yerçekimi kuvveti olan g’nin katlarý þeklinde olacaktýr.
+	- Jiroskop ise, herhangi bir eksende cismin yaptýðý hareketin ölçümünde kullanýlýr. 
+	- Durgun konumdaki bir cisimde jiroskop sýfýr yada çok yakýn bir deðeri ölçer. 
+	- Cisim hareket ettiði sürece jiroskop sensörü, bu hareketin hýzýný bize derece/saniye gibi bir hýz biriminde verecektir.
+- Bu sensör I2C haberleþmesini kullanmaktadýr. Bu arayüzün iligli kartta açýk olmasý gerekmektedir.
+- I2C;
+	- Philips firmasýnýn NXP yarýiletken birimi tarafýndan geliþtirilmiþtir.
+	- SERÝ haberleþme arabirimidir.
+	- Linux tabanlý sistemlerde SMBus olarak anýlmaktadýr.
+	- 2 adet haberleþme hattý bulunmaktadýr.
+	- SCL(serial clock) ve SDA (serial data)

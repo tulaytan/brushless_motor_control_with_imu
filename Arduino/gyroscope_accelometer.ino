@@ -59,27 +59,27 @@ void loop() {
   
   // Registerlar okunur: 0x43 (GYRO_XOUT_H) ve 0x44 (GYRO_XOUT_L)
   gyro_x = Wire.read()<<8 | Wire.read(); 
-  // Registerlar okunur: 0x43 (GYRO_XOUT_H) ve 0x44 (GYRO_XOUT_L)
+  // Registerlar okunur: 0x43 (GYRO_XOUT_H) ve 0x46 (GYRO_YOUT_L)
   gyro_y = Wire.read()<<8 | Wire.read();
-  // Registerlar okunur: 0x43 (GYRO_XOUT_H) ve 0x44 (GYRO_XOUT_L)
+  // Registerlar okunur: 0x43 (GYRO_XOUT_H) ve 0x46 (GYRO_ZOUT_L)
   gyro_z = Wire.read()<<8 | Wire.read(); 
   
   // Dataların ekrana bastırılması
   // İvmeölçer datalarının bastırılması
   Serial.print("aX: ");
   Serial.print(convert_int16_to_str(gyro_x));
-  Serial.print("  aY: ");
+  Serial.print(" aY: ");
   Serial.print(convert_int16_to_str(gyro_y));
-  Serial.print("  aZ: ");
+  Serial.print(" aZ: ");
   Serial.print(convert_int16_to_str(gyro_z));
 
 
   // Jiroskop datalarının bastırılması
-  Serial.print("  gX: ");
+  Serial.print(" gX: ");
   Serial.print(convert_int16_to_str(accelerometer_x));
-  Serial.print("  gY: ");
+  Serial.print(" gY: ");
   Serial.print(convert_int16_to_str(accelerometer_y));
-  Serial.print("  gZ: ");
+  Serial.print(" gZ: ");
   Serial.print(convert_int16_to_str(accelerometer_z));
 
   // Sıcaklık datasının bastırılması
